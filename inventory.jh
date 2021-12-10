@@ -1,0 +1,73 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType gateway,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework react
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName myApp1,
+    applicationType microservice,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName myApp2,
+    applicationType microservice,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+  }
+  entities C
+}
+
+entity Connection {
+	type String,
+}
+
+entity Attribute {}
+
+entity Host {}
+
+entity Datacenter {}
+
+entity Component {}
+
+entity Subcomponent {}
+
+entity App {
+	name String,
+    externalId String,
+}
+
+entity Package {
+	name String,
+    version String,
+}
+
+entity Port {
+	name String,
+	protocol String,
+    number Integer
+}
+
+entity Network {
+	name String
+}
+
+relationship OneToMany {
+  Host to App
+}
+    
