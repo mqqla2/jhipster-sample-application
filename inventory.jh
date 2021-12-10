@@ -30,7 +30,7 @@ application {
     authenticationType jwt,
     prodDatabaseType postgresql,
   }
-
+  
   entities Port
 
 }
@@ -45,7 +45,7 @@ entity Host {}
 
 entity Datacenter {}
 
-entity Component {}
+entity SoftwareComponent {}
 
 entity Subcomponent {}
 
