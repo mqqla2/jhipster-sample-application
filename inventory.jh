@@ -30,7 +30,9 @@ application {
     authenticationType jwt,
     prodDatabaseType postgresql,
   }
+  
   entities Port
+
 }
 
 entity Connection {
